@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66F6D93A2D51DDAE00524AE2 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 66F6D9392D51DDAE00524AE2 /* Auth */; };
+		66F6D93C2D51DDAE00524AE2 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 66F6D93B2D51DDAE00524AE2 /* Functions */; };
+		66F6D93E2D51DDAE00524AE2 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 66F6D93D2D51DDAE00524AE2 /* PostgREST */; };
+		66F6D9402D51DDAE00524AE2 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 66F6D93F2D51DDAE00524AE2 /* Realtime */; };
+		66F6D9422D51DDAE00524AE2 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 66F6D9412D51DDAE00524AE2 /* Storage */; };
+		66F6D9442D51DDAE00524AE2 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 66F6D9432D51DDAE00524AE2 /* Supabase */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66F6D9192D51D65D00524AE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66F6D9002D51D65B00524AE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66F6D9072D51D65B00524AE2;
+			remoteInfo = vibescope_mobile_v1;
+		};
+		66F6D9232D51D65D00524AE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66F6D9002D51D65B00524AE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66F6D9072D51D65B00524AE2;
+			remoteInfo = vibescope_mobile_v1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66F6D9082D51D65B00524AE2 /* vibescope_mobile_v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vibescope_mobile_v1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F6D9182D51D65D00524AE2 /* vibescope_mobile_v1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vibescope_mobile_v1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F6D9222D51D65D00524AE2 /* vibescope_mobile_v1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vibescope_mobile_v1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		66F6D90A2D51D65B00524AE2 /* vibescope_mobile_v1 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = vibescope_mobile_v1;
+			sourceTree = "<group>";
+		};
+		66F6D91B2D51D65D00524AE2 /* vibescope_mobile_v1Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = vibescope_mobile_v1Tests;
+			sourceTree = "<group>";
+		};
+		66F6D9252D51D65D00524AE2 /* vibescope_mobile_v1UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = vibescope_mobile_v1UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66F6D9052D51D65B00524AE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F6D93E2D51DDAE00524AE2 /* PostgREST in Frameworks */,
+				66F6D93C2D51DDAE00524AE2 /* Functions in Frameworks */,
+				66F6D9442D51DDAE00524AE2 /* Supabase in Frameworks */,
+				66F6D93A2D51DDAE00524AE2 /* Auth in Frameworks */,
+				66F6D9422D51DDAE00524AE2 /* Storage in Frameworks */,
+				66F6D9402D51DDAE00524AE2 /* Realtime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F6D9152D51D65D00524AE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F6D91F2D51D65D00524AE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66F6D8FF2D51D65B00524AE2 = {
+			isa = PBXGroup;
+			children = (
+				66F6D90A2D51D65B00524AE2 /* vibescope_mobile_v1 */,
+				66F6D91B2D51D65D00524AE2 /* vibescope_mobile_v1Tests */,
+				66F6D9252D51D65D00524AE2 /* vibescope_mobile_v1UITests */,
+				66F6D9382D51DDAE00524AE2 /* Frameworks */,
+				66F6D9092D51D65B00524AE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66F6D9092D51D65B00524AE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66F6D9082D51D65B00524AE2 /* vibescope_mobile_v1.app */,
+				66F6D9182D51D65D00524AE2 /* vibescope_mobile_v1Tests.xctest */,
+				66F6D9222D51D65D00524AE2 /* vibescope_mobile_v1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66F6D9382D51DDAE00524AE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66F6D9072D51D65B00524AE2 /* vibescope_mobile_v1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66F6D92C2D51D65D00524AE2 /* Build configuration list for PBXNativeTarget "vibescope_mobile_v1" */;
+			buildPhases = (
+				66F6D9042D51D65B00524AE2 /* Sources */,
+				66F6D9052D51D65B00524AE2 /* Frameworks */,
+				66F6D9062D51D65B00524AE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				66F6D90A2D51D65B00524AE2 /* vibescope_mobile_v1 */,
+			);
+			name = vibescope_mobile_v1;
+			packageProductDependencies = (
+				66F6D9392D51DDAE00524AE2 /* Auth */,
+				66F6D93B2D51DDAE00524AE2 /* Functions */,
+				66F6D93D2D51DDAE00524AE2 /* PostgREST */,
+				66F6D93F2D51DDAE00524AE2 /* Realtime */,
+				66F6D9412D51DDAE00524AE2 /* Storage */,
+				66F6D9432D51DDAE00524AE2 /* Supabase */,
+			);
+			productName = vibescope_mobile_v1;
+			productReference = 66F6D9082D51D65B00524AE2 /* vibescope_mobile_v1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66F6D9172D51D65D00524AE2 /* vibescope_mobile_v1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66F6D92F2D51D65D00524AE2 /* Build configuration list for PBXNativeTarget "vibescope_mobile_v1Tests" */;
+			buildPhases = (
+				66F6D9142D51D65D00524AE2 /* Sources */,
+				66F6D9152D51D65D00524AE2 /* Frameworks */,
+				66F6D9162D51D65D00524AE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66F6D91A2D51D65D00524AE2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				66F6D91B2D51D65D00524AE2 /* vibescope_mobile_v1Tests */,
+			);
+			name = vibescope_mobile_v1Tests;
+			packageProductDependencies = (
+			);
+			productName = vibescope_mobile_v1Tests;
+			productReference = 66F6D9182D51D65D00524AE2 /* vibescope_mobile_v1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66F6D9212D51D65D00524AE2 /* vibescope_mobile_v1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66F6D9322D51D65D00524AE2 /* Build configuration list for PBXNativeTarget "vibescope_mobile_v1UITests" */;
+			buildPhases = (
+				66F6D91E2D51D65D00524AE2 /* Sources */,
+				66F6D91F2D51D65D00524AE2 /* Frameworks */,
+				66F6D9202D51D65D00524AE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66F6D9242D51D65D00524AE2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				66F6D9252D51D65D00524AE2 /* vibescope_mobile_v1UITests */,
+			);
+			name = vibescope_mobile_v1UITests;
+			packageProductDependencies = (
+			);
+			productName = vibescope_mobile_v1UITests;
+			productReference = 66F6D9222D51D65D00524AE2 /* vibescope_mobile_v1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66F6D9002D51D65B00524AE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					66F6D9072D51D65B00524AE2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					66F6D9172D51D65D00524AE2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 66F6D9072D51D65B00524AE2;
+					};
+					66F6D9212D51D65D00524AE2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 66F6D9072D51D65B00524AE2;
+					};
+				};
+			};
+			buildConfigurationList = 66F6D9032D51D65B00524AE2 /* Build configuration list for PBXProject "vibescope_mobile_v1" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66F6D8FF2D51D65B00524AE2;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 66F6D9092D51D65B00524AE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66F6D9072D51D65B00524AE2 /* vibescope_mobile_v1 */,
+				66F6D9172D51D65D00524AE2 /* vibescope_mobile_v1Tests */,
+				66F6D9212D51D65D00524AE2 /* vibescope_mobile_v1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66F6D9062D51D65B00524AE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F6D9162D51D65D00524AE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F6D9202D51D65D00524AE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66F6D9042D51D65B00524AE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F6D9142D51D65D00524AE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F6D91E2D51D65D00524AE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66F6D91A2D51D65D00524AE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66F6D9072D51D65B00524AE2 /* vibescope_mobile_v1 */;
+			targetProxy = 66F6D9192D51D65D00524AE2 /* PBXContainerItemProxy */;
+		};
+		66F6D9242D51D65D00524AE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66F6D9072D51D65B00524AE2 /* vibescope_mobile_v1 */;
+			targetProxy = 66F6D9232D51D65D00524AE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		66F6D92A2D51D65D00524AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66F6D92B2D51D65D00524AE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66F6D92D2D51D65D00524AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"vibescope_mobile_v1/Preview Content\"";
+				DEVELOPMENT_TEAM = MVV5QS4Q87;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boxie.vibescope-mobile-v1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66F6D92E2D51D65D00524AE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"vibescope_mobile_v1/Preview Content\"";
+				DEVELOPMENT_TEAM = MVV5QS4Q87;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boxie.vibescope-mobile-v1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66F6D9302D51D65D00524AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVV5QS4Q87;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boxie.vibescope-mobile-v1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vibescope_mobile_v1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/vibescope_mobile_v1";
+			};
+			name = Debug;
+		};
+		66F6D9312D51D65D00524AE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVV5QS4Q87;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boxie.vibescope-mobile-v1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vibescope_mobile_v1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/vibescope_mobile_v1";
+			};
+			name = Release;
+		};
+		66F6D9332D51D65D00524AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVV5QS4Q87;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boxie.vibescope-mobile-v1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vibescope_mobile_v1;
+			};
+			name = Debug;
+		};
+		66F6D9342D51D65D00524AE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVV5QS4Q87;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.boxie.vibescope-mobile-v1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vibescope_mobile_v1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66F6D9032D51D65B00524AE2 /* Build configuration list for PBXProject "vibescope_mobile_v1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F6D92A2D51D65D00524AE2 /* Debug */,
+				66F6D92B2D51D65D00524AE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66F6D92C2D51D65D00524AE2 /* Build configuration list for PBXNativeTarget "vibescope_mobile_v1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F6D92D2D51D65D00524AE2 /* Debug */,
+				66F6D92E2D51D65D00524AE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66F6D92F2D51D65D00524AE2 /* Build configuration list for PBXNativeTarget "vibescope_mobile_v1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F6D9302D51D65D00524AE2 /* Debug */,
+				66F6D9312D51D65D00524AE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66F6D9322D51D65D00524AE2 /* Build configuration list for PBXNativeTarget "vibescope_mobile_v1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F6D9332D51D65D00524AE2 /* Debug */,
+				66F6D9342D51D65D00524AE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66F6D9392D51DDAE00524AE2 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		66F6D93B2D51DDAE00524AE2 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		66F6D93D2D51DDAE00524AE2 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		66F6D93F2D51DDAE00524AE2 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		66F6D9412D51DDAE00524AE2 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		66F6D9432D51DDAE00524AE2 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66F6D9352D51DC5000524AE2 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 66F6D9002D51D65B00524AE2 /* Project object */;
+}
