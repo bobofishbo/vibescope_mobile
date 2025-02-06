@@ -1,0 +1,14 @@
+# Ignore Supabase credentials
+Secrets.swift
+
+# Ignore Xcode user settings
+.vscode/
+xcuserdata/
+
+# Ignore build and derived data
+DerivedData/
+build/
+
+# Ignore macOS system files
+.DS_Store
+

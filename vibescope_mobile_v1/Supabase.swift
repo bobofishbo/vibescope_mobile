@@ -10,8 +10,8 @@ import Foundation
 
 
 let supabase = SupabaseClient(
-  supabaseURL: URL(string: "https://uuyadwuwwbppwgepnsxt.supabase.co")!,
-  supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1eWFkd3V3d2JwcHdnZXBuc3h0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg2NDQ2NTAsImV4cCI6MjA1NDIyMDY1MH0.IPZCq76lC6elxz5BsuT0XBY5aqykyowZICm1QKOfibE"
+    supabaseURL: Secrets.supabaseURL,
+    supabaseKey: Secrets.supabaseKey
 )
 
 struct Group: Decodable, Identifiable {
@@ -21,6 +21,4 @@ struct Group: Decodable, Identifiable {
     let user_id_2: UUID
     let user_id_3: UUID
     let user_id_4: UUID
-    
-    
 }
