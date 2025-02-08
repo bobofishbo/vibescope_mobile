@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct GroupsListView: View {
-    @State var groups: [Group] = []
+    @State var groups: [UserGroup] = []
 
     var body: some View {
         List {
@@ -28,7 +28,7 @@ struct GroupsListView: View {
                     .select()
                     .execute()
 
-                groups = try JSONDecoder().decode([Group].self, from: response.data) // ✅ Use data directly
+                groups = try JSONDecoder().decode([UserGroup].self, from: response.data) // ✅ Use data directly
             } catch {
                 print("Error fetching groups:", error)
             }
