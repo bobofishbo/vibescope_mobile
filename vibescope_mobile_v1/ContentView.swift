@@ -8,7 +8,7 @@ struct ContentView: View {
             Group {
                 if viewModel.isAuthenticated {
                     // ✅ If authenticated, show GroupsListView
-                    GroupListView(viewModel: viewModel)
+                    HomePageView(viewModel: viewModel)
                 } else {
                     // 🔐 If not authenticated, show sign-in/sign-up UI
                     VStack {
