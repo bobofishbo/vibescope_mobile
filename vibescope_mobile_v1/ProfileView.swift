@@ -1,6 +1,14 @@
+//
+//  ProfileView.swift
+//  vibescope_mobile_v1
+//
+//  Created by XIE BO on 2025/2/8.
+//
+
+import Foundation
 import SwiftUI
 
-struct HomeUserInfoView: View {
+struct ProfileView: View {
     @ObservedObject var viewModel: ViewModel
     @State private var userInfo: HomeUserInfo?
     @State private var errorMessage: String?
@@ -71,5 +79,5 @@ struct HomeUserInfoView: View {
 }
 
 #Preview {
-    HomeUserInfoView(viewModel: ViewModel())
+    ProfileView(viewModel: ViewModel())
 }
