@@ -1,0 +1,15 @@
+{
+  "Simulator Target Bundle": "com.boxie.vibescope-mobile-v1",
+  "aps": {
+    "alert": {
+      "title": "Vibescope",
+      "body": "Niconico is hungry"
+    },
+    "sound": "AlertSound.m4a",
+    "badge": 5
+  },
+  "duration": "Current time",
+  "startedAt": "Meeting’s starting time"
+}
+
+
