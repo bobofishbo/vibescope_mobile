@@ -31,7 +31,12 @@ struct AuthView: View {
                     Button {
                         Task {
                             try await viewModel.authorize()
-                            dismiss()
+                            await viewModel.isUserAuthenticated() // ✅ Ensure authentication updates
+                            if viewModel.isAuthenticated {
+                                await MainActor.run {
+                                    dismiss()
+                                }
+                            }
                         }
                         
                     } label: {

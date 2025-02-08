@@ -16,7 +16,7 @@ struct ContentView: View {
                             .font(.largeTitle)
                             .padding()
 
-                        Button("Sign In / Sign Up") {
+                        Button("Sign In") {
                             viewModel.showingAuthView = true
                         }
                         .buttonStyle(.borderedProminent)
