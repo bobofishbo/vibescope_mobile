@@ -1,21 +1,51 @@
-//
-//  ContentView.swift
-//  vibescope_mobile_v1
-//
-//  Created by XIE BO on 2025/2/4.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ViewModel() // Manages authentication state
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            Group {
+                if viewModel.isAuthenticated {
+                    // ✅ If authenticated, show GroupsListView
+                    GroupListView(viewModel: viewModel)
+                } else {
+                    // 🔐 If not authenticated, show sign-in/sign-up UI
+                    VStack {
+                        Text("Welcome to VibeScope")
+                            .font(.largeTitle)
+                            .padding()
+
+                        Button("Sign In") {
+                            viewModel.showingAuthView = true
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .padding()
+                    }
+                }
+            }
+            .toolbar {
+                if viewModel.isAuthenticated {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            Task {
+                                try await viewModel.signOut()
+                                await viewModel.isUserAuthenticated()
+                            }
+                        } label: {
+                            Text("Sign Out")
+                        }
+                    }
+                }
+            }
+            .task {
+                await viewModel.isUserAuthenticated()
+            }
+
+            .sheet(isPresented: $viewModel.showingAuthView) {
+                AuthView(viewModel: viewModel)
+            }
         }
-        .padding()
     }
 }
 

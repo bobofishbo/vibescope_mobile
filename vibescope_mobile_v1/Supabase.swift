@@ -14,7 +14,7 @@ let supabase = SupabaseClient(
     supabaseKey: Secrets.supabaseKey
 )
 
-struct Group: Decodable, Identifiable {
+struct UserGroup: Decodable, Identifiable {
     let id: Int
     let group_name: String
     let user_id_1: UUID

@@ -1,7 +1,8 @@
 import SwiftUI
 
-struct GroupsListView: View {
-    @State var groups: [Group] = []
+struct GroupListView: View {
+    @ObservedObject var viewModel: ViewModel // Accept ViewModel as a parameter
+    @State var groups: [UserGroup] = []
 
     var body: some View {
         List {
@@ -28,7 +29,7 @@ struct GroupsListView: View {
                     .select()
                     .execute()
 
-                groups = try JSONDecoder().decode([Group].self, from: response.data) // ✅ Use data directly
+                groups = try JSONDecoder().decode([UserGroup].self, from: response.data) // ✅ Use data directly
             } catch {
                 print("Error fetching groups:", error)
             }
@@ -38,5 +39,6 @@ struct GroupsListView: View {
 }
 
 #Preview {
-    GroupsListView() // Change to any view you want to preview
+    GroupListView(viewModel: ViewModel()) // Provide a ViewModel instance
 }
+
