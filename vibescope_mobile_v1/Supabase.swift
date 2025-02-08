@@ -22,3 +22,10 @@ struct UserGroup: Decodable, Identifiable {
     let user_id_3: UUID
     let user_id_4: UUID
 }
+
+
+struct HomeUserInfo: Decodable {
+    let user_name: String       // ✅ Your username
+    let group_name: String      // ✅ Your group name
+    let other_members: [String] // ✅ Array of the other 3 group members
+}
