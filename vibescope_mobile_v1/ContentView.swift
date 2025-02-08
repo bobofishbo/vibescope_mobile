@@ -8,7 +8,7 @@ struct ContentView: View {
             Group {
                 if viewModel.isAuthenticated {
                     // ✅ If authenticated, show GroupsListView
-                    GroupsListView()
+                    GroupListView(viewModel: viewModel)
                 } else {
                     // 🔐 If not authenticated, show sign-in/sign-up UI
                     VStack {
@@ -39,8 +39,9 @@ struct ContentView: View {
                 }
             }
             .task {
-                await viewModel.isUserAuthenticated() // ✅ Check authentication status on load
+                await viewModel.isUserAuthenticated()
             }
+
             .sheet(isPresented: $viewModel.showingAuthView) {
                 AuthView(viewModel: viewModel)
             }

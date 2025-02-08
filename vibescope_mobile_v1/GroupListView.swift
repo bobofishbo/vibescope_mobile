@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct GroupsListView: View {
+struct GroupListView: View {
+    @ObservedObject var viewModel: ViewModel // Accept ViewModel as a parameter
     @State var groups: [UserGroup] = []
 
     var body: some View {
@@ -38,5 +39,6 @@ struct GroupsListView: View {
 }
 
 #Preview {
-    GroupsListView() // Change to any view you want to preview
+    GroupListView(viewModel: ViewModel()) // Provide a ViewModel instance
 }
+
