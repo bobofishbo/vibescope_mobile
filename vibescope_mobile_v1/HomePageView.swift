@@ -2,41 +2,19 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-// MARK: - Location Manager (Handles real-time user location updates)
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    private var locationManager = CLLocationManager()
-    
-    @Published var userLocation: CLLocationCoordinate2D? = nil
-
-    override init() {
-        super.init()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        DispatchQueue.main.async {
-            self.userLocation = location.coordinate
-        }
-    }
-}
-
 // MARK: - User Data Model
 struct User: Identifiable {
     let id = UUID()
     let name: String
     let coordinate: CLLocationCoordinate2D
     let avatarImage: String // User's profile image
-    let statusBarImage: String // Corresponding 血条 image
+    let hungerLevel: Int // Status: Food
+    let studyLevel: Int  // Status: Study
 }
 
 // MARK: - Home Page View (Displays Users with Avatars & Status Bars on the Map)
 struct HomePageView: View {
     @ObservedObject var viewModel: ViewModel
-    @StateObject private var locationManager = LocationManager()
     @State private var selectedTab: Int = 1
 
     // Default CMU region
@@ -45,12 +23,12 @@ struct HomePageView: View {
         span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
     )
 
-    // 4 Random Users Placed on CMU Map
+    // 4 Users with fixed locations
     @State private var users: [User] = [
-        User(name: "Fish", coordinate: CLLocationCoordinate2D(latitude: 40.4445, longitude: -79.9450), avatarImage: "fish_icon", statusBarImage: "status_bar_fish"),
-        User(name: "Octopus", coordinate: CLLocationCoordinate2D(latitude: 40.4430, longitude: -79.9462), avatarImage: "octopus_icon", statusBarImage: "status_bar_octopus"),
-        User(name: "Bear", coordinate: CLLocationCoordinate2D(latitude: 40.4422, longitude: -79.9440), avatarImage: "bear_icon", statusBarImage: "status_bar_bear"),
-        User(name: "Cat", coordinate: CLLocationCoordinate2D(latitude: 40.4438, longitude: -79.9425), avatarImage: "cat_icon", statusBarImage: "status_bar_cat")
+        User(name: "Fish", coordinate: CLLocationCoordinate2D(latitude: 40.4445, longitude: -79.9450), avatarImage: "fish_icon", hungerLevel: 80, studyLevel: 30),
+        User(name: "Octopus", coordinate: CLLocationCoordinate2D(latitude: 40.4430, longitude: -79.9462), avatarImage: "octopus_icon", hungerLevel: 50, studyLevel: 90),
+        User(name: "Bear", coordinate: CLLocationCoordinate2D(latitude: 40.4422, longitude: -79.9440), avatarImage: "bear_icon", hungerLevel: 20, studyLevel: 60),
+        User(name: "Cat", coordinate: CLLocationCoordinate2D(latitude: 40.4438, longitude: -79.9425), avatarImage: "cat_icon", hungerLevel: 100, studyLevel: 50)
     ]
 
     var body: some View {
@@ -59,12 +37,10 @@ struct HomePageView: View {
                 // The Map View with User Avatars & Status Bars
                 Map(coordinateRegion: $region, annotationItems: users) { user in
                     MapAnnotation(coordinate: user.coordinate) {
-                        VStack(spacing: 5) {
-                            // Status Bar (血条)
-                            Image(user.statusBarImage)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 120, height: 55) // Adjusted for better fit
+                        VStack(spacing: 6) {
+                            // Status Bars (Food & Study)
+                            StatusBarView(statusValue: user.hungerLevel, iconName: "hunger_icon", barColor: Color(red: 200 / 255, green: 246 / 255, blue: 227 / 255)) // Light Pink
+                            StatusBarView(statusValue: user.studyLevel, iconName: "study_icon", barColor: Color(red: 191 / 255, green: 236 / 255, blue: 255 / 255)) // Light Blue
 
                             // User Avatar
                             Image(user.avatarImage)
@@ -78,21 +54,10 @@ struct HomePageView: View {
                     }
                 }
                 .ignoresSafeArea()
-                .onAppear {
-                    if let userLocation = locationManager.userLocation {
-                        region.center = userLocation
-                    }
-                }
-                .onReceive(locationManager.$userLocation) { newLocation in
-                    if let newLocation = newLocation {
-                        region.center = newLocation
-                    }
-                }
 
                 // Bottom Navigation Bar
                 VStack(spacing: 0) {
                     Spacer()
-
                     HStack(spacing: 0) {
                         Button(action: { selectedTab = 0 }) {
                             Image("cat_eating")
@@ -123,12 +88,27 @@ struct HomePageView: View {
                     .background(Color.white)
                     .ignoresSafeArea(edges: .bottom)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                // Profile Button with Anime Avatar
+                ToolbarItem(placement: .navigationBarLeading) {
                     NavigationLink(destination: ProfileView(viewModel: viewModel)) {
-                        Label("Profile", systemImage: "person.circle")
+                        Image("anime_avatar") // Replace with uploaded anime avatar
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                            .shadow(radius: 3)
+                    }
+                }
+
+                // Settings Button (Sign Out Moved Here)
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "gearshape.fill") // Settings Icon
+                            .font(.title2)
+                            .foregroundColor(.black)
                     }
                 }
             }
@@ -136,6 +116,32 @@ struct HomePageView: View {
     }
 }
 
-#Preview {
-    HomePageView(viewModel: ViewModel())
+// MARK: - Status Bar UI Component
+struct StatusBarView: View {
+    var statusValue: Int
+    var iconName: String // Custom image for the status icon
+    var barColor: Color // Custom bar color
+
+    var body: some View {
+        HStack(spacing: 6) {
+            // Custom Icon (Left Side)
+            Image(iconName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20, height: 20)
+
+            // Status Bar
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color.white.opacity(0.8)) // Background Bar
+                    .frame(width: 180, height: 15)
+
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(barColor) // Updated colors
+                    .frame(width: CGFloat(statusValue) * 1.8, height: 15)
+            }
+        }
+        .padding(.horizontal, 8)
+        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.9)))
+    }
 }
